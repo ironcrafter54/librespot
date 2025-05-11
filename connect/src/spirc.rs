@@ -1748,7 +1748,7 @@ impl SpircTask {
             self.update_volume = true;
 
             self.connect_state.set_volume(new_volume);
-            self.mixer.set_volume(volume);
+            self.mixer.set_volume(65535);
             if let Some(cache) = self.session.cache() {
                 cache.save_volume(volume)
             }
